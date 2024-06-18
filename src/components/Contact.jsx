@@ -6,7 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-
+import MessengerCustomerChat from "react-messenger-customer-chat";
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -65,6 +65,12 @@ const Contact = () => {
   };
 
   return (
+
+    <>
+    <MessengerCustomerChat
+        pageId="196298460417225"
+        appId="2480202145700902"
+      />,
     <div
       className={`xl:mt-12 flex xl:flex-col flex-col-reverse gap-10 overflow-hidden`}
     >
@@ -130,6 +136,7 @@ const Contact = () => {
         
       </motion.div>
     </div>
+    </>
   );
 };
 
